@@ -18,17 +18,11 @@ const roleMiner = {
   mine(creep) {
     const source = Game.getObjectById(creep.memory.sourceId);
     if (creep.harvest(source) === ERR_NOT_IN_RANGE) {
-      creep.moveTo(source, { visualizePathStyle: { stroke: '#ffaa00' } });
+      creep.moveTo(source, { visualizePathStyle: { stroke: '#ffffff' } });
     }
   },
 
   store(creep) {
-    // const targets = creep.room.find(FIND_STRUCTURES, {
-    //   filter: (structure) =>
-    //     structure.structureType === STRUCTURE_CONTAINER &&
-    //     structure.store.getFreeCapacity(RESOURCE_ENERGY) > 0,
-    // });
-
     const target = creep.pos.findClosestByPath(FIND_STRUCTURES, {
       filter: (structure) => structure.structureType === STRUCTURE_CONTAINER,
     });

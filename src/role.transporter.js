@@ -16,6 +16,7 @@ const roleTransporter = {
   },
 
   transport(creep) {
+    // Get all structures that need energy
     let targets = creep.room.find(FIND_STRUCTURES, {
       filter: (structure) =>
         (structure.structureType === STRUCTURE_EXTENSION ||
@@ -30,6 +31,7 @@ const roleTransporter = {
       { filter: (structure) => structure.structureType === STRUCTURE_CONTAINER }
     );
 
+    // Merge the structures that need energy
     if (container) {
       targets = [...targets, container];
     }

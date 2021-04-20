@@ -18,7 +18,6 @@ This is my first attemp to enter into the world of Screeps. Screeps is a fun gam
 - `role.repairer` : Repairs certain structures that have been damaged
 - `role.transporter` : Transports energy from the source to either spawn, extensions or towers
 - `role.upgrader` : Upgrades the room controller
-- `role.upgradeSupporter` : Transports energy from the source to a container close to the room controller
 
 ### Utils
 
@@ -31,7 +30,4 @@ This is my first attemp to enter into the world of Screeps. Screeps is a fun gam
 
 - `colonyConfiguration.population` : Configuration object for the colony population. To be used with the `maintainColonyPop` function.
 
-###### Links:
-
-- https://screeps.com
-- https://store.steampowered.com/app/464350/Screeps
+###### Room: https://screeps.com/a/#!/room/shard3/W13S54

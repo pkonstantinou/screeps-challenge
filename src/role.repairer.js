@@ -18,16 +18,16 @@ const roleRepairer = {
   repair(creep) {
     const targets = creep.room.find(FIND_STRUCTURES, {
       filter: (structure) =>
-        (structure.structureType === STRUCTURE_CONTAINER ||
-          structure.structureType === STRUCTURE_ROAD ||
-          (structure.structureType === STRUCTURE_WALL &&
-            structure.hits < 200000) ||
-          (structure.structureType === STRUCTURE_RAMPART &&
-            structure.hits < 200000)) &&
+        // (structure.structureType === STRUCTURE_CONTAINER ||
+        //   structure.structureType === STRUCTURE_ROAD ||
+        //   (structure.structureType === STRUCTURE_WALL &&
+        //     structure.hits < 200000) ||
+        structure.structureType === STRUCTURE_RAMPART &&
+        structure.hits < 200000 &&
         structure.hits < structure.hitsMax,
     });
 
-    // targets.sort((a, b) => a.hits - b.hits);
+    targets.sort((a, b) => a.hits - b.hits);
 
     if (targets.length > 0) {
       if (creep.repair(targets[0]) === ERR_NOT_IN_RANGE) {

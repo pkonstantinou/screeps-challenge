@@ -13,12 +13,12 @@ exports.colonyConfiguration = {
     {
       role: 'upgrader',
       bodyParts: [WORK, WORK, WORK, WORK, WORK, CARRY, MOVE],
-      maxCount: 5,
+      maxCount: 3,
     },
     {
       role: 'builder',
       bodyParts: [WORK, CARRY, CARRY, CARRY, CARRY, CARRY, MOVE, MOVE, MOVE],
-      maxCount: 0,
+      maxCount: 1,
     },
     {
       role: 'repairer',
